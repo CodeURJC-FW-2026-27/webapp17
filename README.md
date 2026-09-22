@@ -38,7 +38,6 @@
 
 ### Search, filtering or categorization
 #### - Search: Users can search plates by name 
-#### - Filtering: The web application will allow filtering plates by ingredients
 #### - Categorization: The web application will have a feature of categorization by types of plates
 <br>
 <br>
