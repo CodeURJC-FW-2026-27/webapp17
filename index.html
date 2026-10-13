@@ -26,3 +26,30 @@
                 </div>
             </div>
         </nav>
+
+        <div class="menu-tools">
+            <div class="container">
+                <div class="row g-3 align-items-end">
+                    <div class="col-12 col-lg-5">
+                        <div class="menu-search" role="search">
+                            <label class="form-label" for="plate-search">Buscar por nombre</label>
+                            <div class="input-group">
+                                <input class="form-control" type="search" id="plate-search" name="search" placeholder="Ej.: nigiri, udon, tempura…">
+                                <button class="btn search-button" type="button">Buscar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                        <p class="form-label" id="category-label">Tipos de plato</p>
+                        <div class="d-flex flex-wrap gap-2" role="group" aria-labelledby="category-label">
+                            <button class="btn category-button active" type="button" aria-pressed="true">Todos</button>
+                            <button class="btn category-button" type="button" aria-pressed="false">Entrante</button>
+                            <button class="btn category-button" type="button" aria-pressed="false">Sushi</button>
+                            <button class="btn category-button" type="button" aria-pressed="false">Principal</button>
+                            <button class="btn category-button" type="button" aria-pressed="false">Postre</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
