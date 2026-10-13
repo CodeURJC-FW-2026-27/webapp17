@@ -3,8 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="La carta de Sakura Buffet: sushi, entrantes y platos para compartir."
+    />
     <title>Nuevo plato | Sakura Buffet</title>
+
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&amp;family=Poppins:wght@400;500;600;700&amp;display=swap"
+    />
     <link rel="stylesheet" href="css/menu.css" />
   </head>
   <body id="page-top">
@@ -24,6 +33,76 @@
           </div>
         </div>
       </nav>
+
+      <div class="menu-tools">
+        <div class="container">
+          <div class="row g-3 align-items-end">
+            <div class="col-12 col-lg-5">
+              <div class="menu-search" role="search">
+                <label class="form-label" for="plate-search"
+                  >Buscar por nombre</label
+                >
+                <div class="input-group">
+                  <input
+                    class="form-control"
+                    type="search"
+                    id="plate-search"
+                    name="search"
+                    placeholder="Ej.: nigiri, udon, tempura…"
+                  />
+                  <button class="btn search-button" type="button">
+                    Buscar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <p class="form-label" id="category-label">Tipos de plato</p>
+              <div
+                class="d-flex flex-wrap gap-2"
+                role="group"
+                aria-labelledby="category-label"
+              >
+                <button
+                  class="btn category-button active"
+                  type="button"
+                  aria-pressed="true"
+                >
+                  Todos
+                </button>
+                <button
+                  class="btn category-button"
+                  type="button"
+                  aria-pressed="false"
+                >
+                  Entrante
+                </button>
+                <button
+                  class="btn category-button"
+                  type="button"
+                  aria-pressed="false"
+                >
+                  Sushi
+                </button>
+                <button
+                  class="btn category-button"
+                  type="button"
+                  aria-pressed="false"
+                >
+                  Principal
+                </button>
+                <button
+                  class="btn category-button"
+                  type="button"
+                  aria-pressed="false"
+                >
+                  Postre
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -32,19 +111,43 @@
           <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
               <div class="menu-heading mb-4">
-                <h1 class="menu-title" id="menu-title">Crear un <span class="menu-title-accent">plato</span></h1>
+                <p class="menu-eyebrow">Una nueva propuesta</p>
+                <h1 class="menu-title" id="menu-title">
+                  Crear un <span class="menu-title-accent">plato</span>
+                </h1>
+                <p class="menu-introduction">
+                  Completa la información del plato y elige su imagen.
+                </p>
+                <div class="menu-heading-divider" aria-hidden="true"></div>
               </div>
+
               <div class="form-panel">
                 <form class="plate-form">
                   <div class="row g-3">
                     <div class="col-12 col-md-8">
                       <label class="form-label" for="plate-name">Nombre</label>
-                      <input class="form-control" type="text" id="plate-name" name="name" required />
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="plate-name"
+                        name="name"
+                        placeholder="Ej.: Tempura Uramaki"
+                        required
+                      />
                     </div>
                     <div class="col-12 col-md-4">
-                      <label class="form-label" for="plate-type">Tipo de plato</label>
-                      <select class="form-select" id="plate-type" name="type" required>
-                        <option value="" selected disabled>Selecciona un tipo</option>
+                      <label class="form-label" for="plate-type"
+                        >Tipo de plato</label
+                      >
+                      <select
+                        class="form-select"
+                        id="plate-type"
+                        name="type"
+                        required
+                      >
+                        <option value="" selected disabled>
+                          Selecciona un tipo
+                        </option>
                         <option value="starter">Entrante</option>
                         <option value="sushi">Sushi</option>
                         <option value="main">Principal</option>
@@ -52,16 +155,301 @@
                       </select>
                     </div>
                     <div class="col-12">
-                      <label class="form-label" for="plate-description">Descripción</label>
-                      <textarea class="form-control" id="plate-description" name="description" rows="5" required></textarea>
+                      <label class="form-label" for="plate-description"
+                        >Descripción</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="plate-description"
+                        name="description"
+                        rows="5"
+                        placeholder="Describe el plato."
+                        required
+                      ></textarea>
                     </div>
                     <div class="col-12 col-md-6">
-                      <label class="form-label" for="plate-price">Precio (€)</label>
-                      <input class="form-control" type="number" id="plate-price" name="price" required />
+                      <label class="form-label" for="plate-price"
+                        >Precio (€)</label
+                      >
+                      <input
+                        class="form-control"
+                        type="number"
+                        id="plate-price"
+                        name="price"
+                        min="0"
+                        step="0.01"
+                        placeholder="14.75"
+                        required
+                      />
                     </div>
                     <div class="col-12 col-md-6">
-                      <label class="form-label" for="plate-preparation-time">Tiempo de preparación (minutos)</label>
-                      <input class="form-control" type="number" id="plate-preparation-time" name="preparation_time" required />
+                      <label class="form-label" for="plate-preparation-time"
+                        >Tiempo de preparación (minutos)</label
+                      >
+                      <input
+                        class="form-control"
+                        type="number"
+                        id="plate-preparation-time"
+                        name="preparation_time"
+                        min="0"
+                        step="1"
+                        placeholder="18"
+                        required
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="plate-image"
+                        >Imagen del plato</label
+                      >
+                      <input
+                        class="form-control"
+                        type="file"
+                        id="plate-image"
+                        name="image"
+                        accept="image/*"
+                        required
+                      />
+                    </div>
+                    <div class="col-12">
+                      <fieldset class="allergen-fieldset">
+                        <legend class="form-label">Alérgenos</legend>
+                        <p class="form-text mt-0 mb-3">
+                          Selecciona los que contiene el plato. Deja las
+                          casillas sin marcar si no hay alérgenos declarados.
+                        </p>
+                        <div class="row g-2">
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="allergen-gluten"
+                                name="allergens"
+                                value="gluten"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="allergen-gluten"
+                                >Gluten</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="allergen-crustaceans"
+                                name="allergens"
+                                value="crustaceans"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="allergen-crustaceans"
+                                >Crustáceos</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="allergen-eggs"
+                                name="allergens"
+                                value="eggs"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="allergen-eggs"
+                                >Huevos</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="allergen-fish"
+                                name="allergens"
+                                value="fish"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="allergen-fish"
+                                >Pescado</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="allergen-peanuts"
+                                name="allergens"
+                                value="peanuts"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="allergen-peanuts"
+                                >Cacahuetes</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="allergen-soy"
+                                name="allergens"
+                                value="soy"
+                              />
+                              <label class="form-check-label" for="allergen-soy"
+                                >Soja</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="allergen-milk"
+                                name="allergens"
+                                value="milk"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="allergen-milk"
+                                >Leche</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="allergen-nuts"
+                                name="allergens"
+                                value="nuts"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="allergen-nuts"
+                                >Frutos de cáscara</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="allergen-celery"
+                                name="allergens"
+                                value="celery"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="allergen-celery"
+                                >Apio</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="allergen-mustard"
+                                name="allergens"
+                                value="mustard"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="allergen-mustard"
+                                >Mostaza</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="allergen-sesame"
+                                name="allergens"
+                                value="sesame"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="allergen-sesame"
+                                >Sésamo</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="allergen-sulphites"
+                                name="allergens"
+                                value="sulphites"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="allergen-sulphites"
+                                >Sulfitos</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="allergen-lupin"
+                                name="allergens"
+                                value="lupin"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="allergen-lupin"
+                                >Altramuces</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="allergen-molluscs"
+                                name="allergens"
+                                value="molluscs"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="allergen-molluscs"
+                                >Moluscos</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div class="col-12 d-flex justify-content-end gap-2">
+                      <a class="btn secondary-button" href="index.html"
+                        >Cancelar</a
+                      >
+                      <button class="btn search-button" type="button">
+                        Guardar
+                      </button>
                     </div>
                   </div>
                 </form>
@@ -71,5 +459,13 @@
         </div>
       </section>
     </main>
+    <footer class="site-footer">
+      <div class="container d-flex flex-wrap justify-content-between gap-2">
+        <p class="mb-0">
+          <span class="footer-name">Sakura Buffet</span> · Cocina para compartir
+        </p>
+        <p class="mb-0">Sushi · Entrantes · Platos calientes</p>
+      </div>
+    </footer>
   </body>
 </html>
