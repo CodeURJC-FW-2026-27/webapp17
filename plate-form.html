@@ -18,8 +18,58 @@
               <span class="restaurant-tagline">Buffet japonés</span>
             </span>
           </a>
+          <div class="d-flex gap-3">
+            <a class="nav-link" href="index.html#page-top">Inicio</a>
+            <a class="nav-link" href="index.html#menu-grid">Carta</a>
+          </div>
         </div>
       </nav>
     </header>
+
+    <main>
+      <section class="menu-section" aria-labelledby="menu-title">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+              <div class="menu-heading mb-4">
+                <h1 class="menu-title" id="menu-title">Crear un <span class="menu-title-accent">plato</span></h1>
+              </div>
+              <div class="form-panel">
+                <form class="plate-form">
+                  <div class="row g-3">
+                    <div class="col-12 col-md-8">
+                      <label class="form-label" for="plate-name">Nombre</label>
+                      <input class="form-control" type="text" id="plate-name" name="name" required />
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <label class="form-label" for="plate-type">Tipo de plato</label>
+                      <select class="form-select" id="plate-type" name="type" required>
+                        <option value="" selected disabled>Selecciona un tipo</option>
+                        <option value="starter">Entrante</option>
+                        <option value="sushi">Sushi</option>
+                        <option value="main">Principal</option>
+                        <option value="dessert">Postre</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="plate-description">Descripción</label>
+                      <textarea class="form-control" id="plate-description" name="description" rows="5" required></textarea>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label class="form-label" for="plate-price">Precio (€)</label>
+                      <input class="form-control" type="number" id="plate-price" name="price" required />
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label class="form-label" for="plate-preparation-time">Tiempo de preparación (minutos)</label>
+                      <input class="form-control" type="number" id="plate-preparation-time" name="preparation_time" required />
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
