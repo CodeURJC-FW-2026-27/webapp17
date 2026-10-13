@@ -62,16 +62,23 @@
 - Revisión del css y coherencia de diseño de todas las páginas.
 
 **Commits más significativos:**
-1.
-2.
-3.
-4.
-5.
+1. Redacción y modificación del readme principal
+https://github.com/CodeURJC-FW-2026-27/webapp17/commit/aacc54e4c054634d90cf434a9b47cad42d790052
+https://github.com/CodeURJC-FW-2026-27/webapp17/commit/c5353297d1f2cbd4d41ea95c2d9b1aa163aa72d7
+2. Revisión del css.
+https://github.com/CodeURJC-FW-2026-27/webapp17/commit/d8e55127308fb51c49e8a228104e7579be8199fd
+3. Elaboración de los platos del menú.
+https://github.com/CodeURJC-FW-2026-27/webapp17/commit/c591e4411165d2fa250762c301d1ffbc0952ea85
+4. Main input fields and structural layout for plate creation.
+https://github.com/CodeURJC-FW-2026-27/webapp17/commit/051671e088d8cdbbacc143f30916d8a76d4bd1ad
+5. Versión final de la página de nuevo elemento.
+https://github.com/CodeURJC-FW-2026-27/webapp17/commit/98b9030d8b8534e8c83f421c3fa2bda8ee5eb676
 
 **Ficheros en los que más he participado:**
--
--
--
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/plate-form.html
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/README.md
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/css/menu.css
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/vendor/bootstrap/bootstrap.css
 
 
 ### Participación de Iñigo Pérez
