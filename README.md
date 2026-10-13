@@ -41,3 +41,90 @@
 #### - Categorization: The web application will have a feature of categorization by types of plates
 <br>
 <br>
+
+## Práctica 1 — Maquetación de páginas web (HTML y CSS)
+### Capturas página principal:
+
+
+### Capturas página de detalle:
+
+
+### Capturas página de nuevo elemento:
+
+
+
+### Participación de Zhiyang Ni
+**Tareas realizadas:**
+- Redacción del archivo README del proyecto.
+- Selección de la plantilla a usar.
+- Elaboración de la página de nuevo elemento.
+- Elaboración de la mayoría de los platos del menú.
+- Revisión del css y coherencia de diseño de todas las páginas.
+
+**Commits más significativos:**
+1.
+2.
+3.
+4.
+5.
+
+**Ficheros en los que más he participado:**
+-
+-
+-
+
+
+### Participación de Iñigo Pérez
+**Tareas realizadas:**
+- 
+-
+-
+
+**Commits más significativos:**
+1.
+2.
+3.
+
+**Ficheros en los que más he participado:**
+-
+-
+-
+
+### Participación de Miguel Ángel
+**Tareas realizadas:**
+-
+-
+-
+
+**Commits más significativos:**
+1.
+2.
+3.
+
+**Ficheros en los que más he participado:**
+-
+-
+-
+
+### Participación de Raúl Valor
+**Tareas realizadas:**
+-
+-
+-
+
+***Commits más significativos:**
+1.
+2.
+3.
+
+**Ficheros en los que más he participado:**
+-
+-
+-
+
+<br>
+<br>
+
+---
+<br>
+<br>
