@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="La carta de Sakura Buffet: sushi, entrantes y platos para compartir.">
-
     <title>Tempura Uramaki | Sakura Buffet</title>
-
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&amp;family=Poppins:wght@400;500;600;700&amp;display=swap">
     <link rel="stylesheet" href="css/menu.css">
 </head>
-
 <body id="page-top">
     <header class="site-header">
         <nav class="navbar" aria-label="Navegación principal">
@@ -23,7 +20,6 @@
                         <span class="restaurant-tagline">Buffet japonés</span>
                     </span>
                 </a>
-
                 <div class="d-flex gap-3">
                     <a class="nav-link" href="index.html#page-top">Inicio</a>
                     <a class="nav-link" href="index.html#menu-grid">Carta</a>
@@ -43,7 +39,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-12 col-lg-7">
                         <p class="form-label" id="category-label">Tipos de plato</p>
                         <div class="d-flex flex-wrap gap-2" role="group" aria-labelledby="category-label">
@@ -73,12 +68,10 @@
                         <div class="col-12 col-lg-5">
                             <img class="detail-image" src="images/plates/tempura-uramaki.jpg" alt="Tempura Uramaki">
                         </div>
-
                         <div class="col-12 col-lg-7">
                             <p class="plate-category">Sushi</p>
                             <h2 class="section-title">Un bocado crujiente</h2>
                             <p class="detail-description">Rollos de sushi crujientes con gambas en tempura, aguacate, arroz sazonado y alga nori. El contraste entre el relleno suave y el rebozado aporta diferentes texturas en cada bocado.</p>
-
                             <dl class="plate-attributes">
                                 <dt>Precio</dt>
                                 <dd class="plate-price">14,75 €</dd>
@@ -87,7 +80,6 @@
                                 <dt>Alérgenos</dt>
                                 <dd>Gluten, crustáceos, sésamo, sulfitos y huevos.</dd>
                             </dl>
-
                             <div class="d-flex flex-wrap gap-2">
                                 <button class="btn secondary-button" type="button">Editar</button>
                                 <button class="btn danger-button" type="button">Borrar</button>
@@ -99,7 +91,6 @@
 
                 <section class="mb-4" aria-labelledby="ingredients-title">
                     <h2 class="section-title mb-3" id="ingredients-title">Ingredientes asociados</h2>
-
                     <div class="row g-4">
                         <div class="col-12 col-sm-6 col-lg-3">
                             <article class="ingredient-card h-100">
@@ -114,7 +105,6 @@
                                 </div>
                             </article>
                         </div>
-
                         <div class="col-12 col-sm-6 col-lg-3">
                             <article class="ingredient-card h-100">
                                 <img class="ingredient-image" src="images/ingredients/avocado.jpg" alt="Aguacate">
@@ -128,7 +118,6 @@
                                 </div>
                             </article>
                         </div>
-
                         <div class="col-12 col-sm-6 col-lg-3">
                             <article class="ingredient-card h-100">
                                 <img class="ingredient-image" src="images/ingredients/sushi-rice.jpg" alt="Arroz de sushi">
@@ -142,7 +131,6 @@
                                 </div>
                             </article>
                         </div>
-
                         <div class="col-12 col-sm-6 col-lg-3">
                             <article class="ingredient-card h-100">
                                 <img class="ingredient-image" src="images/ingredients/nori.jpeg" alt="Alga nori">
@@ -158,10 +146,32 @@
                         </div>
                     </div>
                 </section>
+
+                <section class="form-panel" aria-labelledby="ingredient-form-title">
+                    <h2 class="section-title" id="ingredient-form-title">Crear un ingrediente</h2>
+                    <form class="ingredient-form">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="ingredient-name">Nombre</label>
+                                <input class="form-control" type="text" id="ingredient-name" name="name" placeholder="Ej.: aguacate" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="ingredient-image">Imagen</label>
+                                <input class="form-control" type="file" id="ingredient-image" name="image" accept="image/*" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="ingredient-description">Descripción</label>
+                                <textarea class="form-control" id="ingredient-description" name="description" rows="3" placeholder="Describe el ingrediente y su aportación al plato." required></textarea>
+                            </div>
+                            <div class="col-12 text-end">
+                                <button class="btn search-button" type="button">Crear</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
             </div>
         </section>
     </main>
-
     <footer class="site-footer">
         <div class="container d-flex flex-wrap justify-content-between gap-2">
             <p class="mb-0"><span class="footer-name">Sakura Buffet</span> · Cocina para compartir</p>
