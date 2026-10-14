@@ -140,7 +140,6 @@ https://github.com/CodeURJC-FW-2026-27/webapp17/commit/7564d0fff85f4e49f90a2bb16
 - https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/css/menu.css
 - https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/index.html
 - https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/plate-detail.html
-- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/plate-form.html
 - https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/README.md
 
 <br>
