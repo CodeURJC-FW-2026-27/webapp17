@@ -44,13 +44,19 @@
 
 ## Práctica 1 — Maquetación de páginas web (HTML y CSS)
 ### Capturas página principal:
-
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/7b8a93ff-bf4f-4587-8e7d-924777b31ab7" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/41cfd0f5-de74-4d15-8c12-5f4db68f0859" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/90907eb1-38d9-4198-802f-931e748b5e7d" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/ec614386-a7c4-462d-a04b-d5c62cdd0bb4" />
 
 ### Capturas página de detalle:
-
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/7fb01240-f9ff-4564-8427-2a81aaa95943" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/085dd9d3-5819-4ad9-88ba-75b245f39a80" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/fb7f111c-a8fc-48c4-8a9a-0a28bebdbdbd" />
 
 ### Capturas página de nuevo elemento:
-
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/27f694d7-db17-489b-9a57-d6a15a678f45" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b2072147-64eb-4637-b69e-70657fb600d2" />
 
 
 ### Participación de Zhiyang Ni
