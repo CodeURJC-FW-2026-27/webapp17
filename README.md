@@ -120,7 +120,7 @@ https://github.com/CodeURJC-FW-2026-27/webapp17/commit/98b9030d8b8534e8c83f421c3
 - Diseño de la sección de herramientas.
 - Construcción de la cuadrícula responsive utilizando el Grid System de Boostrap.
 
-***Commits más significativos:**
+**Commits más significativos:**
 1. Estructura base del HTML y barra de navegación superior.
 https://github.com/CodeURJC-FW-2026-27/webapp17/commit/ef4088fc2727f916775afe6d387832430459e8ba
 2. Barra de búsqueda de platos y controles de filtro por categoría.
