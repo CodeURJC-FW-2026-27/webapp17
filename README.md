@@ -99,19 +99,19 @@ https://github.com/CodeURJC-FW-2026-27/webapp17/commit/98b9030d8b8534e8c83f421c3
 
 ### Participación de Miguel Ángel
 **Tareas realizadas:**
--
--
--
+- Modificacion del archivo README del proyecto.
+- Elaboración de parte de la página de detalle del elemento.
+- Revisión del css y coherencia de diseño de todas las páginas.
 
 **Commits más significativos:**
-1.
-2.
-3.
+1. Completar los ingredientes https://github.com/CodeURJC-FW-2026-27/webapp17/commit/f1631a06784740c360177fbf6acbdc50129cd64d
+2. Versión final de la pagina de detalle https://github.com/CodeURJC-FW-2026-27/webapp17/commit/e8ce3dbdbc0dfae658cf1db43988cbf9fc196674
+3. Modificación del readme.
 
 **Ficheros en los que más he participado:**
--
--
--
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/README.md
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/css/menu.css
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/plate-detail.html
 
 ### Participación de Raúl Valor
 **Tareas realizadas:**
