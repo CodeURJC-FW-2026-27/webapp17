@@ -115,19 +115,29 @@ https://github.com/CodeURJC-FW-2026-27/webapp17/commit/98b9030d8b8534e8c83f421c3
 
 ### Participación de Raúl Valor
 **Tareas realizadas:**
--
--
--
+-Estructuración completa de la página principal.
+-Implementación de cabecera con navegación principal y pie de página compartidos.
+-Diseño de la sección de herramientas.
+-Construcción de la cuadrícula responsive utilizando el Grid System de Boostrap.
 
 ***Commits más significativos:**
-1.
-2.
-3.
+1.Estructura base del HTML y barra de navegación superior.
+https://github.com/CodeURJC-FW-2026-27/webapp17/commit/ef4088fc2727f916775afe6d387832430459e8ba
+2.Barra de búsqueda de platos y controles de filtro por categoría.
+https://github.com/CodeURJC-FW-2026-27/webapp17/commit/00cbe24a71d6f8fcf34ece09cf04a57c8a08121a
+3.Encabezado del menú, botón de creación de nuevo elemento y el grid wrapper.
+https://github.com/CodeURJC-FW-2026-27/webapp17/commit/834c90f195049e2d85c998820ca3b75a123b699e
+4.Primeros 6 platos de muestra con el responsive Boostrap Grid y enlaces a los detalles.
+https://github.com/CodeURJC-FW-2026-27/webapp17/commit/1348eea96e4a266d2076375080654e83e18bc16b
+5.Los 6 platos restantes y el pie de página.
+https://github.com/CodeURJC-FW-2026-27/webapp17/commit/7564d0fff85f4e49f90a2bb16232a25afb539cf7
 
 **Ficheros en los que más he participado:**
--
--
--
+-https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/css/menu.css
+-https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/index.html
+-https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/plate-detail.html
+-https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/plate-form.html
+-https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/README.md
 
 <br>
 <br>
