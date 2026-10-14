@@ -106,7 +106,7 @@ https://github.com/CodeURJC-FW-2026-27/webapp17/commit/98b9030d8b8534e8c83f421c3
 **Commits más significativos:**
 1. Completar los ingredientes https://github.com/CodeURJC-FW-2026-27/webapp17/commit/f1631a06784740c360177fbf6acbdc50129cd64d
 2. Versión final de la pagina de detalle https://github.com/CodeURJC-FW-2026-27/webapp17/commit/e8ce3dbdbc0dfae658cf1db43988cbf9fc196674
-3. Modificación del readme.
+3. Modificación del readme https://github.com/CodeURJC-FW-2026-27/webapp17/commit/5d9a174bea36f5cb9675c3162b88b7faeeabd945
 
 **Ficheros en los que más he participado:**
 - https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/README.md
