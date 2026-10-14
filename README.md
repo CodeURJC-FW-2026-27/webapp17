@@ -83,19 +83,23 @@ https://github.com/CodeURJC-FW-2026-27/webapp17/commit/98b9030d8b8534e8c83f421c3
 
 ### Participación de Iñigo Pérez
 **Tareas realizadas:**
-- 
--
--
+- Creación de la estructura base HTML de la página de detalle del plato.
+- Implementación de la cabecera, barra de navegación, buscador de platos y filtros por categorías.
+- Elaboración de la sección de información detallada del plato, incluyendo imagen, descripción, precio, tiempo  de           preparación y alérgenos.
+- Incorporación de los botones de Editar, Borrar y Volver a la página principal.
+- Implementación de la estructura responsive de la sección de ingredientes mediante el Grid System de Bootstrap.
+- Elaboración de las tarjetas de los primeros ingredientes, incluyendo imágenes, descripciones y botones de acción.
 
 **Commits más significativos:**
-1.
-2.
-3.
+1. Primeros ingredientes https://github.com/CodeURJC-FW-2026-27/webapp17/commit/aec4bcada4f1dba81e0e54cdf8a392743872590c
+2. Información completa del plato https://github.com/CodeURJC-FW-2026-27/webapp17/commit/1af6efde58f50cdf80968b2c729213b97e171467
+3. Cabecera, navegación y buscador https://github.com/CodeURJC-FW-2026-27/webapp17/commit/d34d0a07d94bec395f61c9361de4cc819c1cb362
+4. Esqueleto HTML https://github.com/CodeURJC-FW-2026-27/webapp17/commit/8a19f5bffbcebff4d93c9a62bb9911657614ccff
 
 **Ficheros en los que más he participado:**
--
--
--
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/README.md
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/css/menu.css
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/plate-detail.html
 
 ### Participación de Miguel Ángel
 **Tareas realizadas:**
