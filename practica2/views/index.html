@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+{{>head}}
+<body id="page-top">
+    {{>header}}
+
+    <main>
+        <section class="menu-section" aria-labelledby="menu-title">
+            <div class="container">
+                <div class="menu-heading mb-4">
+                    <p class="menu-eyebrow">Nuestra selección</p>
+                    <h1 class="menu-title" id="menu-title">La carta de <span class="menu-title-accent">Sakura</span></h1>
+                    <p class="menu-introduction">Sushi, entrantes y platos calientes. Una selección para probar y compartir.</p>
+                    <div class="menu-heading-divider" aria-hidden="true"></div>
+                </div>
+
+                <div class="text-end mb-4">
+                    <a class="btn search-button" href="/plates/new">Crear nuevo elemento</a>
+                </div>
+
+                <div class="row g-4" id="menu-grid">
+                    {{#plates}}
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <a class="plate-link d-block h-100" href="/plates/{{_id}}" aria-label="Ver detalle de {{name}}">
+                            <article class="plate-card h-100">
+                                <img class="plate-image" src="{{image}}" alt="{{name}}">
+                                <div class="plate-content">
+                                    <p class="plate-category">{{typeLabel}}</p>
+                                    <h2 class="plate-name">{{name}}</h2>
+                                    <p class="plate-description">{{description}}</p>
+                                    <div class="plate-summary d-flex justify-content-between align-items-end gap-2">
+                                        <p class="plate-price">{{formattedPrice}}</p>
+                                        <p class="plate-time">{{preparationLabel}}</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                    {{/plates}}
+                    {{^plates}}<p>No hay platos que coincidan con la búsqueda.</p>{{/plates}}
+                </div>
+                <nav class="mt-4" aria-label="Páginas de la carta">
+                    <ul class="menu-pagination">
+                        {{#previous}}
+                        <li><a class="btn category-button" href="{{url}}" rel="prev">Anterior</a></li>
+                        {{/previous}}
+                        {{#pages}}
+                        <li><a class="btn category-button{{#active}} active{{/active}}" href="{{url}}"{{#active}} aria-current="page"{{/active}}>{{number}}</a></li>
+                        {{/pages}}
+                        {{#next}}
+                        <li><a class="btn category-button" href="{{url}}" rel="next">Siguiente</a></li>
+                        {{/next}}
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </main>
+    {{>footer}}
+</body>
+</html>

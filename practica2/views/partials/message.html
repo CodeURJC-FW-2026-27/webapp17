@@ -1,0 +1,10 @@
+<section class="menu-section" aria-labelledby="message-title">
+    <div class="container">
+        <div class="detail-panel">
+            <h1 class="menu-title" id="message-title">{{title}}</h1>
+            <p>{{message}}</p>
+            {{#errors}}<p class="text-danger">{{.}}</p>{{/errors}}
+            <a class="btn search-button" href="{{returnUrl}}">{{returnLabel}}</a>
+        </div>
+    </div>
+</section>

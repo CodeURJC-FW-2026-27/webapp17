@@ -1,0 +1,42 @@
+<header class="site-header">
+        <nav class="navbar" aria-label="Navegación principal">
+            <div class="container">
+                <a class="navbar-brand restaurant-brand" href="/">
+                    <span class="restaurant-seal" aria-hidden="true">桜</span>
+                    <span>
+                        <span class="restaurant-name">Sakura</span>
+                        <span class="restaurant-tagline">Buffet japonés</span>
+                    </span>
+                </a>
+                <div class="d-flex gap-3">
+                    <a class="nav-link" href="/#page-top">Inicio</a>
+                    <a class="nav-link" href="/#menu-grid">Carta</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="menu-tools">
+            <div class="container">
+                <div class="row g-3 align-items-end">
+                    <div class="col-12 col-lg-5">
+                        <form class="menu-search" role="search" method="get" action="/">
+                            <label class="form-label" for="plate-search">Buscar por nombre</label>
+                            <div class="input-group">
+                                <input class="form-control" type="search" id="plate-search" name="search" value="{{search}}" placeholder="Ej.: nigiri, udon, tempura…">
+                                <button class="btn search-button" type="submit">Buscar</button>
+                            </div>
+                            <input type="hidden" name="type" value="{{selectedType}}">
+                        </form>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                        <p class="form-label" id="category-label">Tipos de plato</p>
+                        <div class="d-flex flex-wrap gap-2" role="group" aria-labelledby="category-label">
+                            {{#categories}}
+                            <a class="btn category-button{{#active}} active{{/active}}" href="{{url}}"{{#active}} aria-current="page"{{/active}}>{{label}}</a>
+                            {{/categories}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>

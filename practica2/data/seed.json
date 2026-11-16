@@ -1,0 +1,174 @@
+{
+  "plates": [
+    {
+      "_id": "salmon-nigiri",
+      "name": "Nigiri de salmón flambeado",
+      "description": "Increíble nigiri de salmón fresco, ligeramente flameado y servido con salsa de soja.",
+      "type": "sushi",
+      "price": 11.95,
+      "preparationTime": 15,
+      "image": "/uploads/plates/salmon-nigiri.png",
+      "allergens": [],
+      "order": 0
+    },
+    {
+      "_id": "tempura-uramaki",
+      "name": "Tempura Uramaki",
+      "description": "Rollos de sushi crujientes con gambas en tempura, aguacate, arroz y alga nori.",
+      "type": "sushi",
+      "price": 14.75,
+      "preparationTime": 18,
+      "image": "/uploads/plates/tempura-uramaki.jpg",
+      "allergens": [
+        "gluten",
+        "crustaceans",
+        "sesame",
+        "sulphites",
+        "eggs"
+      ],
+      "order": 1,
+      "detailDescription": "Rollos de sushi crujientes con gambas en tempura, aguacate, arroz sazonado y alga nori. El contraste entre el relleno suave y el rebozado aporta diferentes texturas en cada bocado.",
+      "subtitle": "Un bocado crujiente"
+    },
+    {
+      "_id": "spring-rolls",
+      "name": "Rollitos de Primavera (2 unidades)",
+      "description": "Crujiente rollito relleno de verduras frescas y carne, acompañado de salsa agridulce.",
+      "type": "starter",
+      "price": 8.5,
+      "preparationTime": 15,
+      "image": "/uploads/plates/spring-rolls.webp",
+      "allergens": [],
+      "order": 2
+    },
+    {
+      "_id": "jiaozi",
+      "name": "Jiao-Zi (8 unidades)",
+      "description": "Delicadas empanadillas japonesas al vapor, rellenas de sabor oriental.",
+      "type": "starter",
+      "price": 8.0,
+      "preparationTime": 10,
+      "image": "/uploads/plates/jiaozi.jpg",
+      "allergens": [],
+      "order": 3
+    },
+    {
+      "_id": "wonton-soup",
+      "name": "Sopa de Wan-Tun",
+      "description": "Sopa tradicional japonesa elaborada con un suave caldo de pollo aromático, wan-tun rellenos y verduras.",
+      "type": "main",
+      "price": 6.5,
+      "preparationTime": 12,
+      "image": "/uploads/plates/wonton-soup.jpg",
+      "allergens": [],
+      "order": 4
+    },
+    {
+      "_id": "fried-rice",
+      "name": "Arroz Tres Delicias",
+      "description": "Sabroso arroz frito con huevo, verduras y jamón, el clásico de la cocina asiática.",
+      "type": "main",
+      "price": 5.5,
+      "preparationTime": 10,
+      "image": "/uploads/plates/fried-rice.jpg",
+      "allergens": [],
+      "order": 5
+    },
+    {
+      "_id": "shrimp-udon",
+      "name": "Tallarines udon con gambas",
+      "description": "Fideos udon con gambas y verduras salteadas.",
+      "type": "main",
+      "price": 8.75,
+      "preparationTime": 12,
+      "image": "/uploads/plates/shrimp-udon.webp",
+      "allergens": [],
+      "order": 6
+    },
+    {
+      "_id": "tofu-casserole",
+      "name": "Tofu a la cazuela",
+      "description": "Tofu tierno con hortalizas salteadas y un toque de especias asiáticas.",
+      "type": "main",
+      "price": 9.25,
+      "preparationTime": 15,
+      "image": "/uploads/plates/tofu-casserole.webp",
+      "allergens": [],
+      "order": 7
+    },
+    {
+      "_id": "fried-prawns",
+      "name": "Langostinos fritos imperiales",
+      "description": "Crujientes langostinos rebozados al estilo oriental, servidos con salsa agridulce.",
+      "type": "main",
+      "price": 15.0,
+      "preparationTime": 30,
+      "image": "/uploads/plates/fried-prawns.webp",
+      "allergens": [],
+      "order": 8
+    },
+    {
+      "_id": "oyster-sauce-beef",
+      "name": "Ternera con salsa de ostras",
+      "description": "Delicadas tiras de ternera cocinadas al wok con verduras frescas y una intensa salsa de ostras.",
+      "type": "main",
+      "price": 8.95,
+      "preparationTime": 15,
+      "image": "/uploads/plates/oyster-sauce-beef.jpg",
+      "allergens": [],
+      "order": 9
+    },
+    {
+      "_id": "orange-duck",
+      "name": "Pato a la naranja",
+      "description": "Carne de pato tierna y jugosa con una salsa de naranja aromática.",
+      "type": "main",
+      "price": 10.5,
+      "preparationTime": 15,
+      "image": "/uploads/plates/orange-duck.jpg",
+      "allergens": [],
+      "order": 10
+    },
+    {
+      "_id": "ice-cream",
+      "name": "Bola de helado",
+      "description": "Bola de helado con sabor a elegir.",
+      "type": "dessert",
+      "price": 3.0,
+      "preparationTime": 0,
+      "image": "/uploads/plates/ice-cream.jpeg",
+      "allergens": [],
+      "order": 11
+    }
+  ],
+  "ingredients": [
+    {
+      "_id": "tempura-prawns",
+      "plateId": "tempura-uramaki",
+      "name": "Gambas en tempura",
+      "description": "Gambas con un rebozado ligero y crujiente de harina y huevo. Aportan el relleno principal del uramaki.",
+      "image": "/uploads/ingredients/tempura-prawns.jpg"
+    },
+    {
+      "_id": "avocado",
+      "plateId": "tempura-uramaki",
+      "name": "Aguacate",
+      "description": "Fruta de textura cremosa y sabor suave que equilibra el relleno crujiente.",
+      "image": "/uploads/ingredients/avocado.jpg"
+    },
+    {
+      "_id": "sushi-rice",
+      "plateId": "tempura-uramaki",
+      "name": "Arroz de sushi",
+      "description": "Arroz de grano corto sazonado con vinagre, azúcar y sal. Forma la capa exterior del uramaki.",
+      "image": "/uploads/ingredients/sushi-rice.jpg"
+    },
+    {
+      "_id": "nori",
+      "plateId": "tempura-uramaki",
+      "name": "Alga nori",
+      "description": "Lámina de alga tostada que envuelve el relleno y ayuda a mantener la forma del rollo.",
+      "image": "/uploads/ingredients/nori.jpeg"
+    }
+  ]
+}

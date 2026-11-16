@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+{{>head}}
+<body id="page-top">
+    {{>header}}
+
+    <main>
+        <section class="menu-section" aria-labelledby="menu-title">
+            <div class="container">
+                <div class="menu-heading mb-4">
+                    <p class="menu-eyebrow">De nuestra carta</p>
+                    <h1 class="menu-title" id="menu-title"><span class="menu-title-accent">{{plate.name}}</span></h1>
+                    <div class="menu-heading-divider" aria-hidden="true"></div>
+                </div>
+
+                <article class="detail-panel mb-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-12 col-lg-5">
+                            <img class="detail-image" src="{{plate.image}}" alt="{{plate.name}}">
+                        </div>
+                        <div class="col-12 col-lg-7">
+                            <p class="plate-category">{{plate.typeLabel}}</p>
+                            <h2 class="section-title">{{plate.subtitle}}</h2>
+                            <p class="detail-description">{{plate.detailDescription}}</p>
+                            <dl class="plate-attributes">
+                                <dt>Precio</dt>
+                                <dd class="plate-price">{{plate.formattedPrice}}</dd>
+                                <dt>Tiempo de preparación</dt>
+                                <dd>{{plate.preparationTime}} minutos</dd>
+                                <dt>Alérgenos</dt>
+                                <dd>{{plate.allergenText}}</dd>
+                            </dl>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button class="btn secondary-button" type="button" disabled>Editar</button>
+                                <button class="btn danger-button" type="button" disabled>Borrar</button>
+                                <a class="btn search-button" href="/">Volver a la página principal</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <section class="mb-4" aria-labelledby="ingredients-title">
+                    <h2 class="section-title mb-3" id="ingredients-title">Ingredientes asociados</h2>
+                    <div class="row g-4">
+                        {{#ingredients}}
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <article class="ingredient-card h-100">
+                                <img class="ingredient-image" src="{{image}}" alt="{{name}}">
+                                <div class="ingredient-content">
+                                    <h3 class="ingredient-name">{{name}}</h3>
+                                    <p class="ingredient-description">{{description}}</p>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn secondary-button" type="button" disabled>Editar</button>
+                                        <button class="btn danger-button" type="button" disabled>Borrar</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        {{/ingredients}}
+                        {{^ingredients}}<p>Todavía no se han añadido ingredientes a este plato.</p>{{/ingredients}}
+                    </div>
+                </section>
+
+                <section class="form-panel" aria-labelledby="ingredient-form-title">
+                    <h2 class="section-title" id="ingredient-form-title">Crear un ingrediente</h2>
+                    <form class="ingredient-form">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="ingredient-name">Nombre</label>
+                                <input class="form-control" type="text" id="ingredient-name" name="name" placeholder="Ej.: aguacate" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="ingredient-image">Imagen</label>
+                                <input class="form-control" type="file" id="ingredient-image" name="image" accept="image/*" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="ingredient-description">Descripción</label>
+                                <textarea class="form-control" id="ingredient-description" name="description" rows="3" placeholder="Describe el ingrediente y su aportación al plato." required></textarea>
+                            </div>
+                            <div class="col-12 text-end">
+                                <button class="btn search-button" type="button" disabled>Crear</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </main>
+    {{>footer}}
+</body>
+</html>
