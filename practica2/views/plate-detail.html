@@ -46,7 +46,7 @@
                         {{#ingredients}}
                         <div class="col-12 col-sm-6 col-lg-3">
                             <article class="ingredient-card h-100">
-                                <img class="ingredient-image" src="{{image}}" alt="{{name}}">
+                                {{#image}}<img class="ingredient-image" src="{{image}}" alt="{{name}}">{{/image}}
                                 <div class="ingredient-content">
                                     <h3 class="ingredient-name">{{name}}</h3>
                                     <p class="ingredient-description">{{description}}</p>
