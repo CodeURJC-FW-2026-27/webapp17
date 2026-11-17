@@ -318,3 +318,27 @@ Con MongoDB funcionando, ejecutar npm test desde practica2. En PowerShell tambi�
 El proyecto incluye 14 pruebas de integración. Comprueban los datos iniciales, la búsqueda, las categorías, la paginación, la creación, edición y borrado de ambas entidades, las validaciones y el funcionamiento de las imágenes.
 
 Las pruebas utilizan una base de datos y una carpeta de imágenes temporales, que se eliminan al terminar. No modifican los datos guardados en la base de la aplicación.
+
+
+### Participación de Zhiyang Ni
+**Tareas realizadas:**
+- 
+-
+-
+-
+-
+
+**Commits más significativos:**
+1.
+2.
+3.
+4.
+5.
+
+**Ficheros en los que más he participado:**
+-
+-
+-
+-
+-
+
