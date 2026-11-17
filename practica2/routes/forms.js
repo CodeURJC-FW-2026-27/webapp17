@@ -115,6 +115,15 @@ function createFormsRouter(plates, ingredients, options) {
         confirmation(res, 'Plato eliminado', `El plato «${plate.name}» y sus ingredientes se han eliminado con éxito.`, '/', 'Volver a la carta');
     });
 
+    router.post('/plates/:plateId/ingredients/:id/delete', async (req, res, next) => {
+        const plate = await plates.findById(req.params.plateId);
+        const ingredient = await ingredients.findById(req.params.id, req.params.plateId);
+        if (!plate || !ingredient) return next();
+        await ingredients.delete(ingredient._id, plate._id);
+        await removeImage(ingredient.image, options.uploadsDirectory);
+        confirmation(res, 'Ingrediente eliminado', `El ingrediente «${ingredient.name}» se ha eliminado con éxito.`, `/plates/${plate._id}`);
+    });
+
     router.use((error, req, res, next) => {
         if (!req.formContext) return next(error);
         console.error(error);
