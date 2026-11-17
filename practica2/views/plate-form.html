@@ -12,7 +12,7 @@
               <div class="menu-heading mb-4">
                 <p class="menu-eyebrow">Una nueva propuesta</p>
                 <h1 class="menu-title" id="menu-title">
-                  Crear un <span class="menu-title-accent">plato</span>
+                  {{heading}} <span class="menu-title-accent">plato</span>
                 </h1>
                 <p class="menu-introduction">
                   Completa la información del plato y elige su imagen.
@@ -21,7 +21,7 @@
               </div>
 
               <div class="form-panel">
-                <form class="plate-form">
+                <form class="plate-form" method="post" action="{{action}}" enctype="multipart/form-data">
                   <div class="row g-3">
                     <div class="col-12 col-md-8">
                       <label class="form-label" for="plate-name">Nombre</label>
@@ -31,6 +31,7 @@
                         id="plate-name"
                         name="name"
                         placeholder="Ej.: Tempura Uramaki"
+                        value="{{form.name}}" maxlength="100" pattern="\p{Lu}.*" title="Empieza con una letra mayúscula; máximo 100 caracteres"
                         required
                       />
                     </div>
@@ -44,27 +45,26 @@
                         name="type"
                         required
                       >
-                        <option value="" selected disabled>
+                        <option value="" {{^form.type}}selected{{/form.type}} disabled>
                           Selecciona un tipo
                         </option>
-                        <option value="starter">Entrante</option>
-                        <option value="sushi">Sushi</option>
-                        <option value="main">Principal</option>
-                        <option value="dessert">Postre</option>
+                        {{#form.types}}
+                        <option value="{{value}}" {{#selected}}selected{{/selected}}>{{label}}</option>
+                        {{/form.types}}
                       </select>
                     </div>
                     <div class="col-12">
                       <label class="form-label" for="plate-description"
-                        >Descripción</label
+                        >Descripción (entre 10 y 1000 caracteres)</label
                       >
                       <textarea
                         class="form-control"
                         id="plate-description"
                         name="description"
                         rows="5"
-                        placeholder="Describe el plato."
+                        placeholder="Describe el plato." minlength="10" maxlength="1000"
                         required
-                      ></textarea>
+                      >{{form.description}}</textarea>
                     </div>
                     <div class="col-12 col-md-6">
                       <label class="form-label" for="plate-price"
@@ -77,7 +77,7 @@
                         name="price"
                         min="0"
                         step="0.01"
-                        placeholder="14.75"
+                        placeholder="14.75" max="1000" value="{{form.price}}"
                         required
                       />
                     </div>
@@ -92,23 +92,28 @@
                         name="preparation_time"
                         min="0"
                         step="1"
-                        placeholder="18"
+                        placeholder="18" max="1440" value="{{form.preparationTime}}"
                         required
                       />
                     </div>
                     <div class="col-12">
                       <label class="form-label" for="plate-image"
-                        >Imagen del plato</label
+                        >Imagen del plato (máximo 5 MB)</label
                       >
                       <input
                         class="form-control"
                         type="file"
                         id="plate-image"
                         name="image"
-                        accept="image/*"
-                        required
+                        accept="image/jpeg,image/png,image/webp,image/gif"
+                        {{^form.image}}required{{/form.image}}
                       />
                     </div>
+                    {{#form.image}}
+                    <div class="col-12"><p class="form-text">Imagen actual. Selecciona otra sólo si deseas sustituirla (JPEG, PNG, WebP o GIF; máximo 5 MB).</p>
+                      <img class="ingredient-image" src="{{form.image}}" alt="{{form.name}}">
+                    </div>
+                    {{/form.image}}
                     <div class="col-12">
                       <fieldset class="allergen-fieldset">
                         <legend class="form-label">Alérgenos</legend>
@@ -117,236 +122,22 @@
                           casillas sin marcar si no hay alérgenos declarados.
                         </p>
                         <div class="row g-2">
+                          {{#form.allergenOptions}}
                           <div class="col-12 col-sm-6 col-lg-4">
                             <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="allergen-gluten"
-                                name="allergens"
-                                value="gluten"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="allergen-gluten"
-                                >Gluten</label
-                              >
+                              <input class="form-check-input" type="checkbox" id="allergen-{{value}}" name="allergens" value="{{value}}" {{#checked}}checked{{/checked}}>
+                              <label class="form-check-label" for="allergen-{{value}}">{{label}}</label>
                             </div>
                           </div>
-                          <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="allergen-crustaceans"
-                                name="allergens"
-                                value="crustaceans"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="allergen-crustaceans"
-                                >Crustáceos</label
-                              >
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="allergen-eggs"
-                                name="allergens"
-                                value="eggs"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="allergen-eggs"
-                                >Huevos</label
-                              >
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="allergen-fish"
-                                name="allergens"
-                                value="fish"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="allergen-fish"
-                                >Pescado</label
-                              >
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="allergen-peanuts"
-                                name="allergens"
-                                value="peanuts"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="allergen-peanuts"
-                                >Cacahuetes</label
-                              >
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="allergen-soy"
-                                name="allergens"
-                                value="soy"
-                              />
-                              <label class="form-check-label" for="allergen-soy"
-                                >Soja</label
-                              >
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="allergen-milk"
-                                name="allergens"
-                                value="milk"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="allergen-milk"
-                                >Leche</label
-                              >
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="allergen-nuts"
-                                name="allergens"
-                                value="nuts"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="allergen-nuts"
-                                >Frutos de cáscara</label
-                              >
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="allergen-celery"
-                                name="allergens"
-                                value="celery"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="allergen-celery"
-                                >Apio</label
-                              >
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="allergen-mustard"
-                                name="allergens"
-                                value="mustard"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="allergen-mustard"
-                                >Mostaza</label
-                              >
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="allergen-sesame"
-                                name="allergens"
-                                value="sesame"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="allergen-sesame"
-                                >Sésamo</label
-                              >
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="allergen-sulphites"
-                                name="allergens"
-                                value="sulphites"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="allergen-sulphites"
-                                >Sulfitos</label
-                              >
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="allergen-lupin"
-                                name="allergens"
-                                value="lupin"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="allergen-lupin"
-                                >Altramuces</label
-                              >
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="allergen-molluscs"
-                                name="allergens"
-                                value="molluscs"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="allergen-molluscs"
-                                >Moluscos</label
-                              >
-                            </div>
-                          </div>
+                          {{/form.allergenOptions}}
                         </div>
                       </fieldset>
                     </div>
                     <div class="col-12 d-flex justify-content-end gap-2">
-                      <a class="btn secondary-button" href="/"
+                      <a class="btn secondary-button" href="{{cancelUrl}}"
                         >Cancelar</a
                       >
-                      <button class="btn search-button" type="button" disabled>
+                      <button class="btn search-button" type="submit">
                         Guardar
                       </button>
                     </div>
