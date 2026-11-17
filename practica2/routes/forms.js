@@ -91,6 +91,7 @@ function createFormsRouter(plates, ingredients, options) {
 
     router.post('/plates', prepareForm(true, false), parseUpload, saveEntity);
     router.post('/plates/:id/edit', prepareForm(true, true), parseUpload, saveEntity);
+    router.post('/plates/:plateId/ingredients', prepareForm(false, false), parseUpload, saveEntity);
 
     router.post('/plates/:id/delete', async (req, res, next) => {
         const plate = await plates.findById(req.params.id);
