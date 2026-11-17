@@ -10,6 +10,12 @@ async function connectDatabase(options = config) {
         await seedDatabase(database, options.uploadsDirectory);
         await database.collection('plates').createIndex({ type: 1, order: 1, _id: 1 });
         await database.collection('ingredients').createIndex({ plateId: 1 });
+        await database.collection('plates').createIndex({ name: 1 }, {
+            unique: true, collation: { locale: 'es', strength: 2 },
+        });
+        await database.collection('ingredients').createIndex({ plateId: 1, name: 1 }, {
+            unique: true, collation: { locale: 'es', strength: 2 },
+        });
         return { client, database };
     } catch (error) {
         await client.close();
