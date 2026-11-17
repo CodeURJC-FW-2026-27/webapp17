@@ -52,7 +52,7 @@
                                     <p class="ingredient-description">{{description}}</p>
                                     <div class="d-flex gap-2">
                                         <a class="btn secondary-button" href="/plates/{{plate._id}}/ingredients/{{_id}}/edit">Editar</a>
-                                        <button class="btn danger-button" type="button" disabled>Borrar</button>
+                                        <form method="post" action="/plates/{{plate._id}}/ingredients/{{_id}}/delete"><button class="btn danger-button" type="submit">Borrar</button></form>
                                     </div>
                                 </div>
                             </article>
