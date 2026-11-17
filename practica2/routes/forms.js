@@ -19,6 +19,15 @@ function confirmation(res, title, message, returnUrl, returnLabel = 'Ver el plat
 function createFormsRouter(plates, ingredients, options) {
     const router = express.Router();
 
+    router.get('/plates/:id/edit', async (req, res, next) => {
+        const plate = await plates.findById(req.params.id);
+        if (!plate) return next();
+        res.render('plate-form', {
+            ...navigation(), title: 'Editar plato', heading: 'Editar un',
+            form: plateFormView(plate), action: `/plates/${plate._id}/edit`, cancelUrl: `/plates/${plate._id}`,
+        });
+    });
+
     function prepareForm(isPlate, editing) {
         return async (req, res, next) => {
             const plateId = isPlate ? req.params.id : req.params.plateId;
@@ -81,6 +90,7 @@ function createFormsRouter(plates, ingredients, options) {
     }
 
     router.post('/plates', prepareForm(true, false), parseUpload, saveEntity);
+    router.post('/plates/:id/edit', prepareForm(true, true), parseUpload, saveEntity);
 
     router.use((error, req, res, next) => {
         if (!req.formContext) return next(error);
