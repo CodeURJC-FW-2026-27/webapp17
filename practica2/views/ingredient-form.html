@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+{{>head}}
+<body id="page-top">
+    {{>header}}
+    <main>
+        <section class="menu-section" aria-labelledby="ingredient-form-title">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="menu-heading mb-4">
+                            <p class="menu-eyebrow">Ingredientes de nuestra carta</p>
+                            <h1 class="menu-title" id="ingredient-form-title">Editar un <span class="menu-title-accent">ingrediente</span></h1>
+                            <div class="menu-heading-divider" aria-hidden="true"></div>
+                        </div>
+                        <div class="form-panel">{{>ingredient-fields}}</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    {{>footer}}
+</body>
+</html>
