@@ -80,6 +80,8 @@ function createFormsRouter(plates, ingredients, options) {
         confirmation(res, `${entityLabel} ${actionLabel}`, `${entityLabel} «${values.name}» ${actionLabel} con éxito.`, `/plates/${isPlate ? id : plateId}`);
     }
 
+    router.post('/plates', prepareForm(true, false), parseUpload, saveEntity);
+
     router.use((error, req, res, next) => {
         if (!req.formContext) return next(error);
         console.error(error);
