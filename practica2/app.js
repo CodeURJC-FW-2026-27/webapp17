@@ -4,6 +4,8 @@ const mustacheExpress = require('mustache-express');
 const config = require('./config');
 const { connectDatabase } = require('./database');
 const { createPlateRepository } = require('./repositories/plate-repository');
+const { createIngredientRepository } = require('./repositories/ingredient-repository');
+const { createFormsRouter } = require('./routes/forms');
 const { createRouter } = require('./router');
 const { navigation } = require('./view-models');
 
@@ -17,7 +19,9 @@ function createApp(database, options = config) {
     app.use(express.urlencoded({ extended: false, limit: '100kb' }));
     app.use(express.static(path.join(__dirname, 'public')));
     app.use('/uploads', express.static(options.uploadsDirectory));
-    app.use(createRouter(createPlateRepository(database)));
+    const plates = createPlateRepository(database);
+    app.use(createFormsRouter(plates, createIngredientRepository(database), options));
+    app.use(createRouter(plates));
 
     app.use((req, res) => {
         res.status(404).render('error', {
