@@ -1,0 +1,26 @@
+<form class="ingredient-form" method="post" action="{{ingredientAction}}" enctype="multipart/form-data">
+    <div class="row g-3">
+        <div class="col-12 col-md-6">
+            <label class="form-label" for="ingredient-name">Nombre</label>
+            <input class="form-control" type="text" id="ingredient-name" name="name" value="{{ingredientForm.name}}" maxlength="100" placeholder="Ej.: aguacate" required>
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label" for="ingredient-image">Imagen (máximo 5 MB)</label>
+            <input class="form-control" type="file" id="ingredient-image" name="image" accept="image/jpeg,image/png,image/webp,image/gif" {{^ingredientForm.image}}required{{/ingredientForm.image}}>
+        </div>
+        {{#ingredientForm.image}}
+        <div class="col-12">
+            <p class="form-text">Si no seleccionas otra imagen, se conserva la actual.</p>
+            <img class="ingredient-image" src="{{ingredientForm.image}}" alt="{{ingredientForm.name}}">
+        </div>
+        {{/ingredientForm.image}}
+        <div class="col-12">
+            <label class="form-label" for="ingredient-description">Descripción (entre 10 y 1000 caracteres)</label>
+            <textarea class="form-control" id="ingredient-description" name="description" rows="3" minlength="10" maxlength="1000" placeholder="Describe el ingrediente y su aportación al plato." required>{{ingredientForm.description}}</textarea>
+        </div>
+        <div class="col-12 d-flex justify-content-end gap-2">
+            {{#cancelUrl}}<a class="btn secondary-button" href="{{cancelUrl}}">Cancelar</a>{{/cancelUrl}}
+            <button class="btn search-button" type="submit">{{ingredientButton}}</button>
+        </div>
+    </div>
+</form>
