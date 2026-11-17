@@ -1,5 +1,5 @@
 const express = require('express');
-const { types, pageUrl, navigation, plateView } = require('./view-models');
+const { types, pageUrl, navigation, plateView, plateFormView } = require('./view-models');
 
 function createRouter(repository) {
     const router = express.Router();
@@ -25,7 +25,10 @@ function createRouter(repository) {
     });
 
     router.get(['/plates/new', '/plate-form.html'], (req, res) => {
-        res.render('plate-form', { title: 'Nuevo plato', ...navigation() });
+        res.render('plate-form', {
+            title: 'Nuevo plato', ...navigation(), heading: 'Crear un',
+            form: plateFormView(), action: '/plates', cancelUrl: '/',
+        });
     });
 
     router.get('/plate-detail.html', (req, res) => res.redirect('/plates/tempura-uramaki'));
