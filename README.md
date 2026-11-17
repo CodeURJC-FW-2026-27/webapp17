@@ -322,23 +322,23 @@ Las pruebas utilizan una base de datos y una carpeta de imágenes temporales, qu
 
 ### Participación de Zhiyang Ni
 **Tareas realizadas:**
-- 
--
--
--
--
+- Migración completa de la Práctica 1 a la estructura de la Práctica 2, adaptando las páginas para utilizar Node.js, Express, MongoDB y Mustache.
+- Preparación de la conexión con la base de datos, la carga de ejemplos y la reutilización de la cabecera y el pie mediante partials.
+- Adición de las operaciones de persistencia de platos e ingredientes y los índices para evitar nombres duplicados.
+- Validaciones del servidor, la subida y gestión de imágenes y la preparación de los datos del formulario compartido
+- Redacción de las instrucciones de ejecución y la descripción de los archivos en el README.
 
 **Commits más significativos:**
-1.
-2.
-3.
-4.
-5.
+1. Migración de la Práctica 1 a la Práctica 2 (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/ff6f8a6cc5684809508e01d553f4fe448f0b2aae)
+2. Operaciones de persistencia de platos (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/da07ba87604a4e44c08e377cb81972cf78725de8)
+3. Validación de los campos en el servidor (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/96fe10b6a9d4113f1fd68ef9b3a168de0e7ed0d9)
+4. Subida y gestión de imágenes (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/7f20b01b2d3618caebfe6bd66e16661b24255973)
+5. Índices para evitar nombres duplicados (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/f56b9860f6ed4f10def4018e843133c78def6dca)
 
 **Ficheros en los que más he participado:**
--
--
--
--
--
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/repositories/plate-repository.js
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/repositories/ingredient-repository.js
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/services/validation.js
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/services/images.js
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/database.js
 
