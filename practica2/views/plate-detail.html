@@ -64,25 +64,7 @@
 
                 <section class="form-panel" aria-labelledby="ingredient-form-title">
                     <h2 class="section-title" id="ingredient-form-title">Crear un ingrediente</h2>
-                    <form class="ingredient-form">
-                        <div class="row g-3">
-                            <div class="col-12 col-md-6">
-                                <label class="form-label" for="ingredient-name">Nombre</label>
-                                <input class="form-control" type="text" id="ingredient-name" name="name" placeholder="Ej.: aguacate" required>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <label class="form-label" for="ingredient-image">Imagen</label>
-                                <input class="form-control" type="file" id="ingredient-image" name="image" accept="image/*" required>
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label" for="ingredient-description">Descripción</label>
-                                <textarea class="form-control" id="ingredient-description" name="description" rows="3" placeholder="Describe el ingrediente y su aportación al plato." required></textarea>
-                            </div>
-                            <div class="col-12 text-end">
-                                <button class="btn search-button" type="button" disabled>Crear</button>
-                            </div>
-                        </div>
-                    </form>
+                    {{>ingredient-fields}}
                 </section>
             </div>
         </section>
