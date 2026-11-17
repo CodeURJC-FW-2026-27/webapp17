@@ -21,7 +21,8 @@
                         <div class="col-12 col-lg-7">
                             <p class="plate-category">{{plate.typeLabel}}</p>
                             <h2 class="section-title">{{plate.subtitle}}</h2>
-                            <p class="detail-description">{{plate.detailDescription}}</p>
+                            <p class="detail-description">{{plate.description}}</p>
+                            {{#plate.hasDetailDescription}}<p>{{plate.detailDescription}}</p>{{/plate.hasDetailDescription}}
                             <dl class="plate-attributes">
                                 <dt>Precio</dt>
                                 <dd class="plate-price">{{plate.formattedPrice}}</dd>
@@ -31,7 +32,7 @@
                                 <dd>{{plate.allergenText}}</dd>
                             </dl>
                             <div class="d-flex flex-wrap gap-2">
-                                <button class="btn secondary-button" type="button" disabled>Editar</button>
+                                <a class="btn secondary-button" href="/plates/{{plate._id}}/edit">Editar</a>
                                 <button class="btn danger-button" type="button" disabled>Borrar</button>
                                 <a class="btn search-button" href="/">Volver a la página principal</a>
                             </div>
