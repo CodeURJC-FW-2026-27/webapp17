@@ -154,3 +154,167 @@ https://github.com/CodeURJC-FW-2026-27/webapp17/commit/7564d0fff85f4e49f90a2bb16
 ---
 <br>
 <br>
+
+
+## Práctica 2 — Aplicación web del lado del servidor con Node.js
+
+### Descripción
+
+En esta práctica hemos conectado el diseño de Sakura Buffet con un servidor desarrollado en Node.js y Express. Los datos se guardan en MongoDB y las páginas se generan con Mustache.
+
+La aplicación permite consultar, crear, editar y borrar platos y sus ingredientes. También incluye búsqueda por nombre, categorías, paginación de seis platos por página y subida de imágenes. Los formularios se validan tanto en el navegador como en el servidor. Después de cada operación se muestra una página de confirmación o una página de error si los datos no son correctos.
+
+### Requisitos
+
+Para ejecutar el proyecto es necesario tener instalado Node.js 22.21.0 o posterior, npm y MongoDB Community Server. La versión de MongoDB utilizada para probar la aplicación ha sido la 8.2.1.
+
+MongoDB Compass se puede utilizar para consultar los datos, pero es opcional y no sustituye al servidor MongoDB. No hace falta instalar Nodemon ni Express globalmente.
+
+### Instalación y ejecución
+
+#### 1. Descargar el proyecto
+
+Abrir una terminal en la carpeta donde se quiera descargar el repositorio y ejecutar:
+
+git clone https://github.com/CodeURJC-FW-2026-27/webapp17.git
+
+Después, entrar en la carpeta de la práctica:
+
+cd webapp17/practica2
+
+Si el repositorio ya está descargado, basta con abrir una terminal dentro de su carpeta practica2. Los siguientes comandos deben ejecutarse desde esa carpeta, donde se encuentra package.json.
+
+#### 2. Instalar las dependencias
+
+Ejecutar npm install para instalar las dependencias del proyecto.
+
+La aplicación no necesita compilarse, ya que Node.js ejecuta directamente el código del servidor.
+
+#### 3. Iniciar MongoDB
+
+Ejecutar npm run db y dejar esa terminal abierta.
+
+Este comando inicia MongoDB en 127.0.0.1:27017 y guarda sus datos en .local/mongodb/. En Windows busca el ejecutable en la instalación habitual de MongoDB. En otros sistemas, mongod debe estar disponible en el PATH.
+
+Si ya hay un servidor MongoDB funcionando en ese puerto, no hay que iniciar otro.
+
+#### 4. Iniciar la aplicación
+
+Abrir una segunda terminal dentro de practica2 y ejecutar npm start.
+
+Las dos terminales deben permanecer abiertas: una mantiene MongoDB en funcionamiento y la otra ejecuta el servidor web.
+
+#### 5. Abrir la aplicación
+
+Acceder a [http://localhost:3000](http://localhost:3000) desde el navegador.
+
+No hay que abrir directamente los archivos HTML ni utilizar Live Server, porque las páginas necesitan ser procesadas por Express y Mustache.
+
+Para detener la aplicación y MongoDB, pulsar Ctrl+C en cada terminal.
+
+#### Modo de desarrollo
+
+Durante el desarrollo se puede ejecutar npm run dev en lugar de npm start. Este comando reinicia el servidor automáticamente cuando se modifica su código.
+
+#### Ejecución desde PowerShell
+
+Si PowerShell muestra un error indicando que no puede ejecutar npm.ps1, utilizar npm.cmd en los comandos anteriores:
+
+- npm.cmd install para instalar las dependencias.
+- npm.cmd run db para iniciar MongoDB.
+- npm.cmd start para iniciar la aplicación.
+- npm.cmd run dev para trabajar en modo de desarrollo.
+
+### Configuración
+
+El proyecto funciona en local sin crear un archivo .env. Por defecto, utiliza el puerto 3000, se conecta a MongoDB mediante mongodb://127.0.0.1:27017 y guarda los datos en una base llamada sakura_buffet.
+
+Para cambiar la configuración se puede copiar .env.example y guardar la copia con el nombre .env. Desde PowerShell se puede hacer con el comando Copy-Item .env.example .env.
+
+Las variables disponibles son:
+
+- PORT: puerto del servidor web.
+- MONGODB_URI: dirección de conexión a MongoDB.
+- MONGODB_DATABASE: nombre de la base de datos.
+- MONGOD_PATH: ruta del ejecutable de MongoDB, si no se detecta automáticamente.
+
+Después de modificar la configuración es necesario reiniciar la aplicación. El comando npm run db sólo inicia el servidor local del puerto 27017, aunque se haya configurado una conexión remota.
+
+### Datos e imágenes de ejemplo
+
+Al iniciar la aplicación con las colecciones de platos e ingredientes vacías, se cargan automáticamente 12 platos y cuatro ingredientes. Los ingredientes de ejemplo están asociados a Tempura Uramaki.
+
+Las imágenes originales están en data/images/ y se copian a uploads/ al arrancar. No es necesario crear esta carpeta ni ejecutar otro comando para cargar los ejemplos. Los siguientes arranques conservan los cambios guardados en MongoDB.
+
+Los platos necesitan una imagen al crearse. En los ingredientes es opcional: si no se sube ninguna, se muestra la imagen por defecto situada en public/images/platodef.jpg. Al editar sin seleccionar otra imagen, se conserva la que tenía el elemento.
+
+### Descripción de ficheros
+
+Las siguientes rutas corresponden a la carpeta practica2.
+
+#### Servidor y configuración
+
+- **app.js:** configura Express y Mustache, publica los archivos estáticos, conecta los routers y gestiona el arranque, el cierre y los errores generales del servidor.
+- **config.js:** recoge la configuración del puerto, la conexión a MongoDB y la carpeta de imágenes.
+- **database.js:** establece la conexión con MongoDB, carga los ejemplos y crea los índices utilizados en las consultas y para evitar nombres duplicados.
+- **router.js:** gestiona la carta, las búsquedas, las categorías, la paginación, el formulario de nuevo plato y los detalles.
+- **view-models.js:** prepara los datos que se muestran en las plantillas, como los precios, las etiquetas, los enlaces y las opciones seleccionadas del formulario.
+- **package.json:** contiene las dependencias, la versión mínima de Node.js y los comandos del proyecto.
+- **package-lock.json:** registra las versiones concretas de las dependencias.
+- **.env.example:** sirve de ejemplo para configurar las variables de entorno.
+- **.gitignore:** indica qué archivos y carpetas no deben subirse al repositorio.
+
+#### Rutas, repositorios y servicios
+
+- **routes/forms.js:** procesa la creación, edición y borrado de platos e ingredientes. Reutiliza el código de guardado y muestra las confirmaciones o los errores.
+- **repositories/plate-repository.js:** realiza las consultas y operaciones de platos en MongoDB. También consulta sus ingredientes y los elimina cuando se borra el plato.
+- **repositories/ingredient-repository.js:** consulta, crea, modifica y borra ingredientes, teniendo en cuenta el plato al que pertenecen.
+- **services/validation.js:** comprueba los campos recibidos por el servidor, incluyendo nombres, descripciones, categorías, precios, tiempos y alérgenos.
+- **services/images.js:** procesa los archivos enviados con Multer, comprueba su formato y tamaño y gestiona su guardado y eliminación.
+
+#### Datos iniciales
+
+- **data/seed.json:** contiene los platos e ingredientes de ejemplo.
+- **data/seed.js:** inserta los ejemplos cuando las colecciones están vacías y copia sus imágenes a uploads/.
+- **data/images/plates/:** contiene las imágenes originales de los platos.
+- **data/images/ingredients/:** contiene las imágenes originales de los ingredientes.
+
+#### Vistas
+
+Las plantillas tienen extensión .html y se procesan con Mustache.
+
+- **views/index.html:** muestra la carta y los enlaces de paginación.
+- **views/plate-detail.html:** muestra los datos de un plato, sus ingredientes, los botones de acción y el formulario para añadir ingredientes.
+- **views/plate-form.html:** se utiliza tanto para crear como para editar platos.
+- **views/ingredient-form.html:** muestra la página de edición de ingredientes.
+- **views/confirmation.html:** muestra el resultado de las operaciones realizadas correctamente.
+- **views/error.html:** explica los errores y permite volver a la página correspondiente.
+
+#### Partials de Mustache
+
+- **views/partials/head.html:** contiene los metadatos, el título y los enlaces a los estilos.
+- **views/partials/header.html:** contiene la cabecera, la navegación, el buscador y las categorías.
+- **views/partials/footer.html:** contiene el pie de página.
+- **views/partials/message.html:** comparte la presentación de los mensajes de confirmación y error.
+- **views/partials/ingredient-fields.html:** contiene los campos reutilizados para crear y editar ingredientes.
+
+#### Estilos e imágenes
+
+- **public/css/menu.css:** define los estilos de las tarjetas, botones, formularios, detalles y paginación.
+- **public/vendor/bootstrap/bootstrap.css:** contiene los estilos de Bootstrap utilizados para la maquetación.
+- **public/images/platodef.jpg:** es la imagen que se muestra cuando un ingrediente no tiene fotografía.
+
+#### Ejecución y pruebas
+
+- **scripts/start-mongo.js:** inicia MongoDB en local y prepara su carpeta de datos.
+- **test/app.test.js:** contiene las pruebas de integración de las consultas, los formularios, las validaciones, las imágenes y las operaciones de platos e ingredientes.
+
+Las carpetas node_modules/, uploads/ y .local/ se generan durante la instalación o ejecución y no se incluyen en GitHub.
+
+### Pruebas
+
+Con MongoDB funcionando, ejecutar npm test desde practica2. En PowerShell también se puede utilizar npm.cmd test.
+
+El proyecto incluye 14 pruebas de integración. Comprueban los datos iniciales, la búsqueda, las categorías, la paginación, la creación, edición y borrado de ambas entidades, las validaciones y el funcionamiento de las imágenes.
+
+Las pruebas utilizan una base de datos y una carpeta de imágenes temporales, que se eliminan al terminar. No modifican los datos guardados en la base de la aplicación.
