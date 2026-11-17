@@ -28,6 +28,18 @@ function createFormsRouter(plates, ingredients, options) {
         });
     });
 
+    router.get('/plates/:plateId/ingredients/:id/edit', async (req, res, next) => {
+        const plate = await plates.findById(req.params.plateId);
+        const ingredient = await ingredients.findById(req.params.id, req.params.plateId);
+        if (!plate || !ingredient) return next();
+        res.render('ingredient-form', {
+            ...navigation(), title: 'Editar ingrediente',
+            ingredientForm: ingredient,
+            ingredientAction: `/plates/${plate._id}/ingredients/${ingredient._id}/edit`,
+            cancelUrl: `/plates/${plate._id}`, ingredientButton: 'Guardar',
+        });
+    });
+
     function prepareForm(isPlate, editing) {
         return async (req, res, next) => {
             const plateId = isPlate ? req.params.id : req.params.plateId;
@@ -92,6 +104,7 @@ function createFormsRouter(plates, ingredients, options) {
     router.post('/plates', prepareForm(true, false), parseUpload, saveEntity);
     router.post('/plates/:id/edit', prepareForm(true, true), parseUpload, saveEntity);
     router.post('/plates/:plateId/ingredients', prepareForm(false, false), parseUpload, saveEntity);
+    router.post('/plates/:plateId/ingredients/:id/edit', prepareForm(false, true), parseUpload, saveEntity);
 
     router.post('/plates/:id/delete', async (req, res, next) => {
         const plate = await plates.findById(req.params.id);
