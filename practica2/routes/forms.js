@@ -71,7 +71,7 @@ function createFormsRouter(plates, ingredients, options) {
         const repository = isPlate ? plates : ingredients;
         const { values, errors } = validateFields(req.body, isPlate);
         if (req.file && !imageExtension(req.file)) errors.push('La imagen debe ser un archivo JPEG, PNG, WebP o GIF válido.');
-        if (!req.file && !current?.image) errors.push('Selecciona una imagen.');
+        if (isPlate && !req.file && !current?.image) errors.push('Selecciona una imagen.');
         const duplicate = isPlate ? await repository.findByName(values.name, current?._id)
             : await repository.findByName(values.name, plateId, current?._id);
         if (duplicate) errors.push(isPlate ? 'Ya existe un plato con ese nombre.' : 'Ya existe un ingrediente con ese nombre en este plato.');
