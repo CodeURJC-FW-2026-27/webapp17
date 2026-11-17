@@ -5,8 +5,8 @@
             <input class="form-control" type="text" id="ingredient-name" name="name" value="{{ingredientForm.name}}" maxlength="100" placeholder="Ej.: aguacate" required>
         </div>
         <div class="col-12 col-md-6">
-            <label class="form-label" for="ingredient-image">Imagen (máximo 5 MB)</label>
-            <input class="form-control" type="file" id="ingredient-image" name="image" accept="image/jpeg,image/png,image/webp,image/gif" {{^ingredientForm.image}}required{{/ingredientForm.image}}>
+            <label class="form-label" for="ingredient-image">Imagen (opcional, máximo 5 MB)</label>
+            <input class="form-control" type="file" id="ingredient-image" name="image" accept="image/jpeg,image/png,image/webp,image/gif">
         </div>
         {{#ingredientForm.image}}
         <div class="col-12">
