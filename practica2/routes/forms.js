@@ -92,6 +92,15 @@ function createFormsRouter(plates, ingredients, options) {
     router.post('/plates', prepareForm(true, false), parseUpload, saveEntity);
     router.post('/plates/:id/edit', prepareForm(true, true), parseUpload, saveEntity);
 
+    router.post('/plates/:id/delete', async (req, res, next) => {
+        const plate = await plates.findById(req.params.id);
+        if (!plate) return next();
+        const related = await plates.findIngredients(plate._id);
+        await plates.delete(plate._id);
+        await Promise.all([plate, ...related].map(item => removeImage(item.image, options.uploadsDirectory)));
+        confirmation(res, 'Plato eliminado', `El plato «${plate.name}» y sus ingredientes se han eliminado con éxito.`, '/', 'Volver a la carta');
+    });
+
     router.use((error, req, res, next) => {
         if (!req.formContext) return next(error);
         console.error(error);
