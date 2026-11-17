@@ -29,6 +29,18 @@ function createPlateRepository(database) {
         findIngredients(plateId) {
             return ingredients.find({ plateId }).toArray();
         },
+        findByName(name, exceptId) {
+            return plates.findOne({ name, _id: { $ne: exceptId || '' } }, { collation: { locale: 'es', strength: 2 } });
+        },
+        create(plate) { return plates.insertOne(plate); },
+        update(id, values) {
+            return plates.updateOne({ _id: id }, { $set: values, $unset: { subtitle: '', detailDescription: '' } });
+        },
+        async delete(id) {
+            const result = await plates.deleteOne({ _id: id });
+            await ingredients.deleteMany({ plateId: id });
+            return result;
+        },
     };
 }
 
