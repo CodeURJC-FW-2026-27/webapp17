@@ -41,10 +41,21 @@ function plateView(plate) {
         preparationLabel: plate.preparationTime === 0 ? 'Servicio inmediato' : `${plate.preparationTime} min`,
         subtitle: plate.subtitle || plate.name,
         detailDescription: plate.detailDescription || plate.description,
+        hasDetailDescription: Boolean(plate.detailDescription && plate.detailDescription !== plate.description),
         allergenText: plate.allergens?.length
             ? plate.allergens.map(value => allergens[value] || value).join(', ')
             : 'Sin información de alérgenos registrada.',
     };
 }
 
-module.exports = { types, pageUrl, navigation, plateView };
+function plateFormView(plate = {}) {
+    return {
+        ...plate,
+        types: types.filter(type => type.value).map(type => ({ ...type, selected: type.value === plate.type })),
+        allergenOptions: Object.entries(allergens).map(([value, label]) => ({
+            value, label, checked: plate.allergens?.includes(value),
+        })),
+    };
+}
+
+module.exports = { types, allergens, pageUrl, navigation, plateView, plateFormView };
