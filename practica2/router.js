@@ -41,6 +41,7 @@ function createRouter(repository) {
             ...navigation(),
             plate: plateView(plate),
             ingredients: await repository.findIngredients(plate._id),
+            ingredientAction: `/plates/${plate._id}/ingredients`, ingredientButton: 'Crear',
         });
     });
 
