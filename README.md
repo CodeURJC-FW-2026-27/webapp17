@@ -373,3 +373,6 @@ Las carpetas node_modules/, uploads/ y .local/ se generan durante la instalació
 - https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/public/images/platodef.jpg
 
 ### Participación de Raúl Valor Cano
+
+### Vídeo en Youtube
+https://youtu.be/EEe9aFpEv5A
