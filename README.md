@@ -373,6 +373,20 @@ Las carpetas node_modules/, uploads/ y .local/ se generan durante la instalació
 - https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/public/images/platodef.jpg
 
 ### Participación de Raúl Valor Cano
+**Tareas realizadas:**
+- Adaptar el formulario para enviar datos e imágenes al servidor, incorporar validaciones HTML y permitir la precarga de valores mediante Mustache al editar un plato.
+- Preparar la ruta del formulario de nuevo plato para enviar a la plantilla los datos iniciales, la dirección de envío y el enlace de cancelación.
+- Revisión del proyecto respecto a la rúbrica.
+
+**Commits más significativos:**
+1. Formulario compartido de platos (https://github.com/CodeURJC-FW-2026-27/ webapp17/commit/47382b84065383d014721da56d27fc33e3f94d76)
+2. Preparación de la ruta del formulario de creación de platos (https://github.com/ CodeURJC-FW-2026-27/webapp17/commit/ c3fea2eb675a514d5de9f3d977149d1406b13038)
+3. Campos reutilizables de ingredientes (https://github.com/CodeURJC-FW-2026-27/ webapp17/commit/2eb311175caecbc8439786c4e70141d561dc42ac)
+
+**Ficheros en los que más he participado:**
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/views/ plate-form.html
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/router.js
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/views/ partials/ingredient-fields.html
 
 ### Vídeo en Youtube
 https://youtu.be/EEe9aFpEv5A
