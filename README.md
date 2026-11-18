@@ -343,18 +343,18 @@ Las carpetas node_modules/, uploads/ y .local/ se generan durante la instalació
 - Adaptación de las vistas y los botones de acción, reutilización de los campos del formulario de ingredientes y corrección de su imagen para que fuera opcional. 
 
 **Commits más significativos:** 
-1. Procesamiento compartido de formularios (https://github.com/CodeURJC-FW-2026-27/ webapp17/commit/4fb610f34063f77d63087bedd6ac833faf6e52b6)
-2. Edición de platos (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/ f7885edb9682e8bda7de1ce1eb39fd655fef7d9e)
-3. Borrado de platos e ingredientes asociados (https://github.com/CodeURJC-FW-2026-27/ webapp17/commit/7e86e2a8c419a4802c8a605f2c4b687f7c8affe5)
-4. Edición de ingredientes (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/ 9d847ba9dcc44faf1cdc5bf6e0aef881cf5b3091)
-5. Borrado de ingredientes (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/ cb76ad3c61317bbd73c255288de03b53412ec93b)
+1. Procesamiento compartido de formularios (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/4fb610f34063f77d63087bedd6ac833faf6e52b6)
+2. Edición de platos (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/f7885edb9682e8bda7de1ce1eb39fd655fef7d9e)
+3. Borrado de platos e ingredientes asociados (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/7e86e2a8c419a4802c8a605f2c4b687f7c8affe5)
+4. Edición de ingredientes (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/9d847ba9dcc44faf1cdc5bf6e0aef881cf5b3091)
+5. Borrado de ingredientes (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/cb76ad3c61317bbd73c255288de03b53412ec93b)
 
 **Ficheros en los que más he participado:** 
 - https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/routes/forms.js
 - https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/views/plateform.html
 - https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/views/platedetail.html
-- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/views/ ingredient-form.html
-- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/views/partials/ ingredient-fields.html 
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/views/ingredient-form.html
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/views/partials/ingredient-fields.html 
 
 ### Participación de Miguel Ángel Abián Arienza
 **Tareas realizadas:**
