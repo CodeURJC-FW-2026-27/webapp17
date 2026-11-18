@@ -358,18 +358,18 @@ Las carpetas node_modules/, uploads/ y .local/ se generan durante la instalació
 
 ### Participación de Miguel Ángel Abián Arienza
 **Tareas realizadas:**
-- Modificacion del archivo README del proyecto.
-- Elaboración de parte de la página de detalle del elemento.
-- Revisión del css y coherencia de diseño de todas las páginas.
+- Preparar los valores necesarios para reutilizar el formulario al crear y editar platos, incluyendo la categoría seleccionada y los alérgenos marcados.
+- Añadir la clase .default-image en public/css/menu.css para mostrar la imagen completa, sin recortarla, con margen interior y fondo blanco.
+- Añadir el archivo platodef.jpg a los recursos públicos del proyecto para utilizarlo como imagen por defecto.
 
 **Commits más significativos:**
-1. Completar los ingredientes https://github.com/CodeURJC-FW-2026-27/webapp17/commit/f1631a06784740c360177fbf6acbdc50129cd64d
-2. Versión final de la pagina de detalle https://github.com/CodeURJC-FW-2026-27/webapp17/commit/e8ce3dbdbc0dfae658cf1db43988cbf9fc196674
-3. Modificación del readme https://github.com/CodeURJC-FW-2026-27/webapp17/commit/5d9a174bea36f5cb9675c3162b88b7faeeabd945
+1. Preparación de los datos del formulario (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/214cdf7e8e090a146c081ac2c3d7a863c5c9e5ac)
+2. Adaptación del estilo de la imagen por defecto (https://github.com/CodeURJCFW-2026-27/webapp17/commit/3fdabad2a1c656947376b0104748f9cf7f2010bf)
+3. Incorporación de la imagen por defecto (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/9ccd085beed068120169cb6846667eaf6a55bdb4)
 
 **Ficheros en los que más he participado:**
-- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/README.md
-- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/css/menu.css
-- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/plate-detail.html
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/viewmodels.js
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/public/css/menu.css
+- https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/public/images/platodef.jpg
 
 ### Participación de Raúl Valor Cano
