@@ -333,3 +333,9 @@ Las carpetas node_modules/, uploads/ y .local/ se generan durante la instalació
 - https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/services/images.js
 - https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/database.js
 
+
+### Participación de Iñigo Pérez Martínez
+
+### Participación de Miguel Ángel Abián Arienza
+
+### Participación de Raúl Valor Cano
