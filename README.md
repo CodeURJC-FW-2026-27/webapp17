@@ -379,9 +379,9 @@ Las carpetas node_modules/, uploads/ y .local/ se generan durante la instalació
 - Revisión del proyecto respecto a la rúbrica.
 
 **Commits más significativos:**
-1. Formulario compartido de platos (https://github.com/CodeURJC-FW-2026-27/ webapp17/commit/47382b84065383d014721da56d27fc33e3f94d76)
-2. Preparación de la ruta del formulario de creación de platos (https://github.com/ CodeURJC-FW-2026-27/webapp17/commit/ c3fea2eb675a514d5de9f3d977149d1406b13038)
-3. Campos reutilizables de ingredientes (https://github.com/CodeURJC-FW-2026-27/ webapp17/commit/2eb311175caecbc8439786c4e70141d561dc42ac)
+1. Formulario compartido de platos (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/47382b84065383d014721da56d27fc33e3f94d76)
+2. Preparación de la ruta del formulario de creación de platos (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/c3fea2eb675a514d5de9f3d977149d1406b13038)
+3. Campos reutilizables de ingredientes (https://github.com/CodeURJC-FW-2026-27/webapp17/commit/2eb311175caecbc8439786c4e70141d561dc42ac)
 
 **Ficheros en los que más he participado:**
 - https://github.com/CodeURJC-FW-2026-27/webapp17/blob/main/practica2/views/ plate-form.html
