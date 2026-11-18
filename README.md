@@ -166,7 +166,7 @@ La aplicación permite consultar, crear, editar y borrar platos y sus ingredient
 
 ### Requisitos
 
-Para ejecutar el proyecto es necesario tener instalado Node.js 22.21.0 o posterior, npm y MongoDB Community Server. La versión de MongoDB utilizada para probar la aplicación ha sido la 8.2.1.
+Para ejecutar el proyecto es necesario tener instalado Node.js 22.21.0 o posterior, npm y MongoDB Community Server. La versión de MongoDB utilizada para comprobar la aplicación ha sido la 8.2.1.
 
 MongoDB Compass se puede utilizar para consultar los datos, pero es opcional y no sustituye al servidor MongoDB. No hace falta instalar Nodemon ni Express globalmente.
 
@@ -304,20 +304,11 @@ Las plantillas tienen extensión .html y se procesan con Mustache.
 - **public/vendor/bootstrap/bootstrap.css:** contiene los estilos de Bootstrap utilizados para la maquetación.
 - **public/images/platodef.jpg:** es la imagen que se muestra cuando un ingrediente no tiene fotografía.
 
-#### Ejecución y pruebas
+#### Ejecución
 
 - **scripts/start-mongo.js:** inicia MongoDB en local y prepara su carpeta de datos.
-- **test/app.test.js:** contiene las pruebas de integración de las consultas, los formularios, las validaciones, las imágenes y las operaciones de platos e ingredientes.
 
 Las carpetas node_modules/, uploads/ y .local/ se generan durante la instalación o ejecución y no se incluyen en GitHub.
-
-### Pruebas
-
-Con MongoDB funcionando, ejecutar npm test desde practica2. En PowerShell también se puede utilizar npm.cmd test.
-
-El proyecto incluye 14 pruebas de integración. Comprueban los datos iniciales, la búsqueda, las categorías, la paginación, la creación, edición y borrado de ambas entidades, las validaciones y el funcionamiento de las imágenes.
-
-Las pruebas utilizan una base de datos y una carpeta de imágenes temporales, que se eliminan al terminar. No modifican los datos guardados en la base de la aplicación.
 
 
 ### Participación de Zhiyang Ni
